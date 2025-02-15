@@ -7,12 +7,25 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Handwritten Text Recognition (OCR.Space)</h1>
-  <p>Upload an image with text:</p>
-  <input type="file" id="imageInput" accept="image/*">
-  <h2>Recognized Text:</h2>
-  <div id="output">Text will appear here...</div>
+  <div class="container">
+    <h1>📝 Handwriting to Text Converter</h1>
+    
+    <div class="drop-zone" id="dropZone">
+      <p>Drag and drop an image here<br>or click to upload</p>
+      <input type="file" id="imageInput" accept="image/*" hidden>
+    </div>
 
+    <img id="imagePreview" alt="Preview">
+    <div class="spinner" id="spinner"></div>
+    <div class="error" id="error"></div>
+
+    <div id="output"></div>
+
+    <div class="button-group">
+      <button id="copyBtn">📋 Copy Text</button>
+      <button id="downloadBtn">💾 Download Text</button>
+    </div>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>
